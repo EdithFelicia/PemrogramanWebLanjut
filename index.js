@@ -94,11 +94,11 @@ const searchInputElement = document.querySelector('.searchInput');
 
 // pagination
 // 12. Definisikan selector untuk pagination
-const prevPage =  document.querySelector('.prevPagination');
-const pageOne = document.querySelector('.pageOne');
-const pageTwo = document.querySelector('.pageTwo');
-const pageThree = document.querySelector('.pageThree');
-const nextPage = document.querySelector('.nextPagination');
+const prevPage =  document.querySelector('.page-link.prevPagination');
+const pageOne = document.querySelector('.page-link.pageOne');
+const pageTwo = document.querySelector('.page-link.pageTwo');
+const pageThree = document.querySelector('.page-link.pageThree');
+const nextPage = document.querySelector('.page-link.nextPagination');
 
 
 // 13. Buat fungsi bernama petCardComponent untuk merender nilai dari hasil fetch data di endpoint
