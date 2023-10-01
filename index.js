@@ -104,19 +104,19 @@ const nextPage = document.querySelector('.nextPagination');
 // 13. Buat fungsi bernama petCardComponent untuk merender nilai dari hasil fetch data di endpoint
 const PetCardComponent = (pet) => {
   // 13a. tampilkan nilai dari breeds dari array ke 0
-  const breed = pet.breeds[0].name;
+  const breed = pet.breeds[0];
   // 13b. tampilkan hasil nilai dibawah ini sesuai dengan response yang didapatkan
   return `<div class="card my-3 mx-2" style="width: 20%">
     <img height="300" style="object-fit: cover" class="card-img-top" src=${pet.url} alt="Card image cap" />
     <div class="card-body">
-      <h5 class="card-title d-inline">${breed}</h5>
+      <h5 class="card-title d-inline">${breed.name}</h5>
       <p class="card-text">
-        ${pet.breeds[0].temperament || 'No description available'}
+        ${breed.temperament || 'No description available'}
       </p>
-      <p>${pet.breeds[0].breed_group}</p>
-      <span class="badge badge-pill badge-info">${pet.breeds[0].life_span}</span>
-      <span class="badge badge-pill badge-warning">Weight: ${pet.breeds[0].weight.metric}</span>
-      <span class="badge badge-pill badge-danger">Height: ${pet.breeds[0].height.metric}</span>
+      <p>${breed.breed_group}</p>
+      <span class="badge badge-pill badge-info">${breed.life_span}</span>
+      <span class="badge badge-pill badge-warning">Weight: ${breed.weight.metric}</span>
+      <span class="badge badge-pill badge-danger">Height: ${breed.height.metric}</span>
     </div>
   </div>`
 };
